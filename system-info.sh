@@ -6,6 +6,17 @@ BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
+# Internet Connectivity Check
+echo -e "${BLUE}Checking Internet Connection...${NC}"
+
+if ping -c 1 google.com &> /dev/null
+then
+    echo -e "${GREEN}✓ Internet Connection: Connected${NC}"
+else
+    echo -e "${RED}✗ Internet Connection: Not Connected${NC}"
+fi
+
+echo ""
 
 echo -e "${BLUE}"
 echo "========================================"
