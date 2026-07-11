@@ -37,7 +37,13 @@ echo -e "${YELLOW}CPU Information${NC}"
 lscpu | grep "Model name"
 
 echo
-echo -e "${YELLOW}Memory Usage${NC}"
+echo -e "${YELLOW}Memory Usage${NC}"echo
+echo -e "${YELLOW}CPU Usage${NC}"
+
+CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')
+
+echo -e "${GREEN}CPU Usage:${NC} ${CPU_USAGE}%"
+
 free -h
 
 echo
