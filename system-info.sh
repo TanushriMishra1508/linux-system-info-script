@@ -50,11 +50,13 @@ CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')
 
 echo -e "${GREEN}CPU Usage:${NC} ${CPU_USAGE}%"
 
-free -h
-
+free -h 
 echo
-echo -e "${YELLOW}Disk Usage${NC}"
-df -h /
+echo -e "${YELLOW}Disk Usage Percentage${NC}"
+
+df -h / | awk 'NR==2 {
+    print "Disk Used: " $5
+}'
 
 echo
 echo -e "${YELLOW}IP Address${NC}"
