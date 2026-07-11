@@ -1,4 +1,5 @@
 # 🐧 Linux System Information Script
+![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420?logo=ubuntu&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-Scripting-4EAA25?logo=gnubash&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github) ![Status](https://img.shields.io/badge/Status-Completed-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue)
 
 A lightweight Bash automation script that displays essential Linux system information such as hostname, operating system, kernel version, CPU details, memory usage, disk usage, uptime, and current date & time.
 
