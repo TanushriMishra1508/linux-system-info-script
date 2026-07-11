@@ -1,27 +1,46 @@
 #!/bin/bash
 
-echo "System Information"
-echo "------------------"
+# Color Codes
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m'
 
-echo "Hostname:"
-hostname
+echo -e "${BLUE}"
+echo "========================================"
+echo "     Linux System Information"
+echo "========================================"
+echo -e "${NC}"
 
-echo ""
+echo -e "${GREEN}Hostname:${NC} $(hostname)"
+echo -e "${GREEN}Current User:${NC} $(whoami)"
+echo -e "${GREEN}Operating System:${NC} $(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')"
+echo -e "${GREEN}Kernel Version:${NC} $(uname -r)"
+echo -e "${GREEN}Architecture:${NC} $(uname -m)"
+echo -e "${GREEN}System Uptime:${NC} $(uptime -p)"
 
-echo "Current User:"
-whoami
+echo
+echo -e "${YELLOW}CPU Information${NC}"
+lscpu | grep "Model name"
 
-echo ""
-
-echo "Current Date and Time:"
-date
-
-echo ""
-
-echo "Disk Usage:"
-df -h
-
-echo ""
-
-echo "Memory Usage:"
+echo
+echo -e "${YELLOW}Memory Usage${NC}"
 free -h
+
+echo
+echo -e "${YELLOW}Disk Usage${NC}"
+df -h /
+
+echo
+echo -e "${YELLOW}IP Address${NC}"
+hostname -I
+
+echo
+echo -e "${GREEN}Current Date & Time:${NC} $(date)"
+
+echo
+echo -e "${BLUE}========================================"
+echo "       Script Executed Successfully"
+echo "========================================"
+echo -e "${NC}"
