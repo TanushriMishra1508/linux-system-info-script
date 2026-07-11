@@ -26,6 +26,7 @@ echo -e "${NC}"
 
 echo -e "${GREEN}Hostname:${NC} $(hostname)"
 echo -e "${GREEN}Current User:${NC} $(whoami)"
+echo -e "${GREEN}Private IP Address:${NC} $(hostname -I | awk '{print $1}')"
 echo -e "${GREEN}Operating System:${NC} $(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')"
 echo -e "${GREEN}Kernel Version:${NC} $(uname -r)"
 echo -e "${GREEN}Architecture:${NC} $(uname -m)"
