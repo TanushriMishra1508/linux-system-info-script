@@ -38,6 +38,12 @@ lscpu | grep "Model name"
 
 echo
 echo -e "${YELLOW}Memory Usage${NC}"echo
+echo
+echo -e "${YELLOW}Memory Usage Percentage${NC}"
+
+free | awk '/Mem:/ {
+    printf "Memory Used: %.2f%%\n", $3/$2 * 100
+}'
 echo -e "${YELLOW}CPU Usage${NC}"
 
 CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')
