@@ -1,7 +1,7 @@
 # 🐧 Linux System Information Script
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420?logo=ubuntu&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-Scripting-4EAA25?logo=gnubash&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github) ![Status](https://img.shields.io/badge/Status-Completed-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-A lightweight Bash automation script that displays essential Linux system information such as hostname, operating system, kernel version, CPU details, memory usage, disk usage, uptime, and current date & time.
+A lightweight Bash automation script that collects and displays essential Linux system information, including hostname, operating system, kernel version, CPU details, memory usage, disk usage, system uptime, IP address, and current date & time.
 
 This project was created to practice Linux commands, shell scripting, and basic system monitoring.
 
@@ -45,6 +45,12 @@ linux-system-info-script
 
 ---
 
+## 📋 Prerequisites
+
+- Ubuntu/Linux operating system
+- Bash shell
+- Terminal access
+- 
 ## ▶️ How to Run
 
 ```bash
@@ -53,6 +59,11 @@ chmod +x system-info.sh
 ```
 
 ---
+### Run the script
+
+```bash
+bash system-info.sh
+```
 
 ## 📷 Sample Output
 
@@ -85,4 +96,4 @@ chmod +x system-info.sh
 
 B.Tech CSE (2024–2028)
 
-Aspiring Data Analyst | Data Science Enthusiast | Linux Learner
+Aspiring Data Analyst | Linux & DevOps Learner | Open Source Enthusiast
