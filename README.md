@@ -55,10 +55,7 @@ chmod +x system-info.sh
 ---
 
 ## 📷 Sample Output
-
-*(Screenshot will be added later.)*
-
----
+![Linux System Information Output](screenshots/output.jpg)
 
 ## 📚 Learning Outcomes
 
